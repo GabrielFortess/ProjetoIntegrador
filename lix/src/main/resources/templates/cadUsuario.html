@@ -17,17 +17,19 @@
         <div class="row justify-content-center">
             <div class="col-sm-6">
                 <h3>CADASTRO DE USÚARIO</h3>
-                <form action="http://localhost:3000/cadastros"  method="POST" action="#">
+                     <form th:action="@{/cadUsuario}" th:object="${usuario}"  method="POST">
                         <label  class="form-label">Nome:</label>
-                        <input id="nome" class="form-control" type="text">
+                        <input id="nome" class="form-control" type="text"  th:field="*{nome}">
                         <label class="form-label">Senha:</label>
-                        <input id="senha" class="form-control" type="text">
-                         <label class="form-label">Senha:</label>
-                        <input id="senha" class="form-control" type="text">
+                        <input id="senha" class="form-control" type="text"  th:field="*{senha}">
+                         <label class="form-label" >Salario: </label>
+                        <input id="salario" class="form-control" type="number" th:field="*{salario}">
+                         <label class="form-label">funcao </label>
+                        <input id="funcao" class="form-control" type="text" th:field="*{funcao}">
                         <label class="form-label">CPF:</label>
-                        <input id="cpf" class="form-control" type="text">
+                        <input id="cpf" class="form-control" type="number"  th:field="*{cpf}">
                          <label class="form-label">Endereço</label>
-                        <input id="endereco" class="form-control" type="text">
+                        <input id="endereco" class="form-control" type="text"  th:field="*{endereco}">
                         <div class="mb-3"> 
                         <input type="submit" class="btn btn-primary" value="Enviar">
                         </div>

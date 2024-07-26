@@ -28,16 +28,15 @@
                             <th>Excluir</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td><input value="Nome"></td>
-                            <td><input value="Rua 1"></td>
-                            <td><input value="25/06/2024"></td>
-                            <td><input value="225"></td>
-                            <td><button value="excluir" class="btn btn-secondary">Excluir</button></td>
+                             <tbody>
+                        <tr th:each="destino : ${destinos}">
+                            <td th:text="${destino.id}" ></td>
+                            <td><input th:value="${destino.nome}"></td>
+                            <td><input th:value="${destino.endereco}"></td>
+                            <td><input th:value="${destino.data}"></td>
+                            <td><input th:value="${destino.unidades}"></td>
+                           <td onclick="this.closest('tr').remove()"><button value="excluir" class="btn btn-secondary">Excluir</button> </td>
                           </tr>
-                    
                     </tbody>
                 </table>
             </div>

@@ -3,8 +3,8 @@ package com.pi.model;
 
 
 public class usuario {
-    int id,cpf,salario;
-        String nome,endereco,senha,funcao;         
+    int id,salario;
+        String nome,endereco,senha,funcao,cpf;         
     public String getNome() {
         return nome;
     }
@@ -15,14 +15,15 @@ public class usuario {
     public String getSenha() {
         return senha;
     }
-    public int getCPF() {
-        return cpf;
-    }
+
     public int getSalario() {
         return salario;
     }
      public String getFuncao() {
         return funcao;
+    }
+      public String getCpf() {
+        return cpf;
     }
     public void setNome(String nome) {
         this.nome = nome;
@@ -35,7 +36,7 @@ public class usuario {
     public void setSenha(String senha) {
         this.senha = senha;
     }
-    public void setCPF(int cpf) {
+    public void setCpf(String cpf) {
         this.cpf = cpf;
     }
     public void setSalario(int salario) {

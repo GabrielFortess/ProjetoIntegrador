@@ -28,22 +28,21 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td><input value="Nome"></td>
-                            <td><input value="Lixo"></td>
-                            <td><input value="Nenhum"></td>
-                            <td><button value="excluir" class="btn btn-secondary">Excluir</button></td>
+                        <tr th:each="descarte : ${descartes}">
+                            <td th:text="${descarte.id}" ></td>
+                            <td><input th:value="${descarte.nome}"></td>
+                            <td><input th:value="${descarte.tipo}"></td>
+                            <td><input th:value="${descarte.destino}"></td>
+                           <td onclick="this.closest('tr').remove()"><button value="excluir" class="btn btn-secondary">Excluir</button> </td>
                           </tr>
-                    
                     </tbody>
                 </table>
             </div>
         </div>
     </div>
     
-        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 
+      
 
 </body>
 

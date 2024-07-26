@@ -14,7 +14,7 @@
     <div class="container">
         <div class="row justify-content-center">
     
-            <div class="col-sm-6">
+            <div class="col-sm-12">
                 <h3>ADMINSTRAÇÃO DE USÚARIOS</h3>
 
                 <table id="tabelaDescarte" class="table table-bordered">
@@ -23,22 +23,25 @@
                             <th>ID</th>
                             <th>Nome</th>
                             <th>Senha</th>
+                            <th>Salàrio</th>
+                            <th>Função</th>
                             <th>CPF</th>
                             <th>Endereço</th>
                             <th>Excluir</th>
                         </tr>
                     </thead>
-                    <tbody>
-                        <tr>
-                            <td>1</td>
-                            <td><input value="Nome"></td>
-                            <td><input value="123"></td>
-                            <td><input value="1234567890"></td>
-                            <td><input value="Rua 2"></td>                                
-                            <td><button value="excluir" class="btn btn-secondary">Excluir</button></td>
+                            <tbody>
+                        <tr th:each="usuario : ${usuarios}">
+                            <td th:text="${usuario.id}" ></td>
+                            <td><input th:value="${usuario.nome}"></td>
+                            <td><input th:value="${usuario.senha}"></td>
+                            <td><input th:value="${usuario.salario}"></td>
+                            <td><input th:value="${usuario.funcao}"></td>
+                            <td><input th:value="${usuario.cpf}" ></td>
+                            <td><input th:value="${usuario.endereco}"></td>
+                           <td onclick="this.closest('tr').remove()"><button value="excluir" class="btn btn-secondary">Excluir</button> </td>
                           </tr>
-                    
-                    </tbody>
+                    </tbody>        
                 </table>
             </div>
         </div>
