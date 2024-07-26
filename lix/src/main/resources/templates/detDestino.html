@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+</head>
+
+<body>
+    <header th:insert="navbar.html :: nav"></header>
+    
+    <div class="container">
+        <div class="row justify-content-center">
+    
+            <div class="col-sm-12">
+                <h3>ADMINSTRAÇÃO DE DESTINOS</h3>
+
+                <table id="tabelaDescarte" class="table table-bordered">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nome</th>
+                            <th>Endereço</th>
+                            <th>Data de entrega</th>
+                            <th>Unidades pedidas</th>
+                            <th>Excluir</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><input value="Nome"></td>
+                            <td><input value="Rua 1"></td>
+                            <td><input value="25/06/2024"></td>
+                            <td><input value="225"></td>
+                            <td><button value="excluir" class="btn btn-secondary">Excluir</button></td>
+                          </tr>
+                    
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    
+        <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+
+</body>
+
+</html>
