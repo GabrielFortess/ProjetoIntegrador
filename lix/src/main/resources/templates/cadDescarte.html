@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<link rel="stylesheet" href="PI-CSS.css">
+<link rel="stylesheet" href="MAIN-CSS.css">
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>  
 
 
@@ -16,8 +16,8 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-sm-6">
-                <h3>DESCARTES</h3>
-                    <form th:action="@{/cadDescarte}" th:object="${descarte}"  method="POST">
+                <h3 class="titulo">DESCARTES</h3>
+                    <form th:action="@{/cadDescarte}" th:object="${descarte}"  method="POST" class="form">
                         <label for="txtNome" class="form-label">Nome:</label>
                         <input id="nome" class="form-control" type="text"  th:field="*{nome}">
                         <div class="mb-3"> 
@@ -28,7 +28,7 @@
             </div>
             <div class="col-sm-3">
                 <div class="text-center">
-                    <img src="https://img.freepik.com/psd-gratuitas/vista-frontal-do-quarto-com-uma-cama-e-maquete-de-mesas-de-cabeceira-de-madeira-moderna_176382-1965.jpg" height="210" />
+                    <img src="https://static7.depositphotos.com/1200925/721/i/450/depositphotos_7217373-stock-photo-municipal-waste.jpg" class="img" height="210" />
                 </div>
             </div>
         </div>

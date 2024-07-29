@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<link rel="stylesheet" href="PI-CSS.css">
+<link rel="stylesheet" href="MAIN-CSS.css">
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>  
 
 
@@ -17,11 +17,11 @@
         <div class="row">
             <div class="col-sm-3">
                 <div class="text-center">
-                    <img src="https://img.freepik.com/psd-gratuitas/vista-frontal-do-quarto-com-uma-cama-e-maquete-de-mesas-de-cabeceira-de-madeira-moderna_176382-1965.jpg" height="210" />
+                    <img class="img" src="https://img.freepik.com/psd-gratuitas/vista-frontal-do-quarto-com-uma-cama-e-maquete-de-mesas-de-cabeceira-de-madeira-moderna_176382-1965.jpg" height="210" />
                 </div>
             </div>
             <div class="col-sm-6">
-                <h3>DESTINOS</h3>
+                <h3 class="titulo">DESTINOS</h3>
                        <form th:action="@{/cadDestino}" th:object="${destino}"  method="POST">
                         <label class="form-label">Nome:</label>
                         <input id="nome" class="form-control"  th:field="*{nome}" type="text">

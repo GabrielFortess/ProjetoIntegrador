@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<link rel="stylesheet" href="PI-CSS.css">
+<link rel="stylesheet" href="MAIN-CSS.css">
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>  
 
 
@@ -16,7 +16,7 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-sm-6">
-                <h3>CADASTRO DE USÚARIO</h3>
+                <h3 class="titulo">CADASTRO DE USÚARIO</h3>
                      <form th:action="@{/cadUsuario}" th:object="${usuario}"  method="POST">
                         <label  class="form-label">Nome:</label>
                         <input id="nome" class="form-control" type="text"  th:field="*{nome}">
