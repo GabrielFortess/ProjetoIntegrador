@@ -32,7 +32,7 @@ let descarte = data[i];
                                 if ($(this).val().toLowerCase() !== "separar" | $(this).val().toLowerCase() == "separar" & descarte.destino !== null) {
                                     atualizar($(this).closest('tr').attr('data-id'), {
                                         nome: descarte.nome,
-                                        tipo: $(this).val(),
+                                        tipo: $(this).val().toLowerCase(),
                                         destino: descarte.destino
                                     });
                                 } else {
