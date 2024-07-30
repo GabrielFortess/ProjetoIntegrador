@@ -30,3 +30,5 @@ CREATE TABLE `usuario` (
 
   PRIMARY KEY (id)
 );
+
+INSERT into usuario(nome,endereco,senha,salario,funcao,cpf) VALUES ('admin','rua 1','123',5,'admin','cpf');

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<link rel="stylesheet" href="MAIN-CSS.css">
+<link rel="stylesheet" href="css/MAIN-CSS.css">
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>  
 
 
@@ -17,25 +17,25 @@
         <div class="row">
             <div class="col-sm-3">
                 <div class="text-center">
-                    <img class="img" src="https://img.freepik.com/psd-gratuitas/vista-frontal-do-quarto-com-uma-cama-e-maquete-de-mesas-de-cabeceira-de-madeira-moderna_176382-1965.jpg" height="210" />
+                    <img class="img" src="https://media.istockphoto.com/id/508858132/photo/happy-woman-driving-a-truck-wearing-hi-vis-clothes.jpg?s=612x612&w=0&k=20&c=yvfPtTo8G9HVbiFbGtcpSwYThrdfcBvPH4u-pYRXm9w=" height="210" />
                 </div>
             </div>
             <div class="col-sm-6">
                 <h3 class="titulo">DESTINOS</h3>
-                       <form th:action="@{/cadDestino}" th:object="${destino}"  method="POST">
+                       <form id="formCadastrar"  method="POST">
                         <label class="form-label">Nome:</label>
-                        <input id="nome" class="form-control"  th:field="*{nome}" type="text">
+                        <input required id="nome" class="form-control"  type="text">
                         <label class="form-label">Endereço:</label>
-                        <input id="endereco" class="form-control" th:field="*{endereco}" type="text">
+                        <input required id="endereco" class="form-control"  type="text">
                         <label class="form-label">Data de entrega:</label>
-                        <input id="data" class="form-control" th:field="*{data}" type="date">
+                        <input required id="data" class="form-control"  type="date">
                         <label class="form-label">Unidades pedidas:</label>
-                        <input id="unidades" class="form-control" th:field="*{unidades}" type="number">
+                        <input required id="unidades" class="form-control" type="number">
                         <div class="mb-3"> 
                         <input type="submit" class="btn btn-primary" value="Enviar">
                         </div>
                 </form>
-                <script src="db.js"></script>
+                <script src="js/cadDestino.js"></script>
             </div>
       
         </div>

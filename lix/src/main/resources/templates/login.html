@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<link rel="stylesheet" href="MAIN-CSS.css">
+<link rel="stylesheet" href="css/MAIN-CSS.css">
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>  
 
 
@@ -17,16 +17,16 @@
         <div class="row justify-content-center">
             <div class="col-sm-6">
                 <h3 class="titulo">LOGIN</h3>
-                <form th:action="@{/login}"  th:object="${usuario}"  method="POST">
+                <form id="formLogin" th:action="@{/login}"  th:object="${usuario}"  method="POST">
                         <label  class="form-label">Nome:</label>
-                        <input id="nome" class="form-control" type="text" th:field="*{nome}">
+                        <input required class="form-control" type="text" id="txtNome" th:field="*{nome}">
                         <label class="form-label">Senha:</label>
-                        <input id="senha" class="form-control" type="text">
+                        <input required class="form-control" id="txtSenha" type="text">
                         <div class="mb-3"> 
                         <input type="submit" class="btn btn-primary" value="Enviar">
                         </div>
                 </form>
-                <script src="db.js"></script>
+                <script src="js/login.js"></script>
             </div>
 
         </div>

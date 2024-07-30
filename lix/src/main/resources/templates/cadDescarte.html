@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-<link rel="stylesheet" href="MAIN-CSS.css">
+<link rel="stylesheet" href="css/MAIN-CSS.css">
 <script src="https://code.jquery.com/jquery-3.4.1.js"></script>  
 
 
@@ -12,19 +12,18 @@
 </head>
 
 <body>
-    <header th:insert="navbar.html :: nav"></header> 
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-sm-6">
                 <h3 class="titulo">DESCARTES</h3>
-                    <form th:action="@{/cadDescarte}" th:object="${descarte}"  method="POST" class="form">
+                    <form id="formCadastrar"  method="POST" class="form">
                         <label for="txtNome" class="form-label">Nome:</label>
-                        <input id="nome" class="form-control" type="text"  th:field="*{nome}">
+                        <input id="nome" class="form-control" type="text" required>
                         <div class="mb-3"> 
                         <input type="submit" class="btn btn-primary" value="Enviar">
                         </div>
                 </form>
-                <script src="db.js"></script>
+                <script src="js/cadDescarte.js"></script>
             </div>
             <div class="col-sm-3">
                 <div class="text-center">

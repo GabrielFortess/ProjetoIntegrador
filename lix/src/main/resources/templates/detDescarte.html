@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
-    <link rel="stylesheet" href="MAIN-CSS.css">
+    <link rel="stylesheet" href="css/MAIN-CSS.css">
+        <script src="https://code.jquery.com/jquery-3.4.1.js"></script>  
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +10,7 @@
 </head>
 
 <body>
-    <header th:insert="navbar.html :: nav"></header>
+
     
     <div class="container">
         <div class="row justify-content-center">
@@ -17,7 +18,7 @@
             <div class="col-sm-6">
                 <h3 class="titulo">ADMINSTRAÇÃO DE DESCARTES</h3>
 
-                <table id="tabelaDescarte" class="table table-bordered">
+                <table id="tabela" class="table table-bordered">
                     <thead>
                         <tr>
                             <th>ID</th>
@@ -28,15 +29,10 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <tr th:each="descarte : ${descartes}">
-                            <td th:text="${descarte.id}" ></td>
-                            <td><input th:value="${descarte.nome}"></td>
-                            <td><input th:value="${descarte.tipo}"></td>
-                            <td><input th:value="${descarte.destino}"></td>
-                           <td onclick="this.closest('tr').remove()"><button value="excluir" class="btn btn-secondary">Excluir</button> </td>
-                          </tr>
+      
                     </tbody>
                 </table>
+                <script src="js/detalheDescarte.js"></script>
             </div>
         </div>
     </div>
