@@ -32,3 +32,6 @@ CREATE TABLE `usuario` (
 );
 
 INSERT into usuario(nome,endereco,senha,salario,funcao,cpf) VALUES ('admin','rua 1','123',5,'admin','cpf');
+INSERT into usuario(nome,endereco,senha,salario,funcao,cpf) VALUES ('user1','rua 1','123',5,'coletor','cpf');
+INSERT into usuario(nome,endereco,senha,salario,funcao,cpf) VALUES ('user2','rua 1','123',5,'separador','cpf');
+INSERT into usuario(nome,endereco,senha,salario,funcao,cpf) VALUES ('user3','rua 1','123',5,'transportador','cpf');
